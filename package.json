@@ -1,5 +1,5 @@
 {
-  "name": "@primer/figma-action",
+  "name": "@transcend-io/figma-action",
   "version": "1.0.0-alpha.2",
   "description": "GitHub action for exporting figma components.",
   "scripts": {

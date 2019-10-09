@@ -106,7 +106,8 @@ client.file(fileId)
         encoding: (options.format === 'svg' ? 'utf8' : null)
       })
       .then(response => {
-        return ensureDir(join(options.outputDir, options.format))
+        const componentDir = component.name.split('/').slice(0, -1).join('/');
+        return ensureDir(join(options.outputDir, options.format, componentDir))
           .then(() => writeFile(join(options.outputDir, options.format, `${component.name}.${options.format}`), response.body, (options.format === 'svg' ? 'utf8' : 'binary')))
       })
     }))
